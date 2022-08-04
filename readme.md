@@ -1,8 +1,8 @@
-## Nim Emscripten Tutorial for NIX/NIXOS.
+## Nim Emscripten Tutorial.
 
 ### Step 0: Making sure Emscripten can compile C:
 
-Install [Nix or NixOS](https://nixos.org)
+Install [Nix or NixOS](https://nixos.org) for [Linux](https://nixos.org/download.html#nix-install-linux), [MacOS](https://nixos.org/download.html#nix-install-macos) or [Windows](https://nixos.org/download.html#nix-install-windows)
 
 After nix installation clone this repository
 
@@ -19,9 +19,7 @@ Now inside of the tutorial folder, lets compile a basic C program to make sure i
 emcc step0.c -o step0.html
 ```
 
-To view the files we need to run a webserver:
-
-To serve files, run the project services:
+To view the files we need to run a webserver, run the project webserver:
 ```sh
 initSvcs
 ```
@@ -51,7 +49,7 @@ Next lets try Nim, look at the very simple [step1.nim](step1.nim):
 echo "Hello World, from Nim."
 ```
 
-Most of the work will be done but the [step1.nims](step1.nims) file:
+Most of the work will be done by the [step1.nims](step1.nims) file:
 ```nim
 if defined(emscripten):
   # This path will only run if -d:emscripten is passed to nim.
