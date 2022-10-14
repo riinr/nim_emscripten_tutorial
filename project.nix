@@ -1,8 +1,8 @@
 { 
   env = [
-    { name = "HOME";          eval = "$PRJ_DATA_DIR/home"; }
+    { name = "HOME";          eval = "$PRJ_DATA_DIR/home";  }
     { name = "EM_CACHE";      eval = "$PRJ_DATA_DIR/cache"; }
-    { name = "EMCC_TEMP_DIR"; eval = "$PRJ_DATA_DIR/temp"; }
+    { name = "EMCC_TEMP_DIR"; eval = "$PRJ_DATA_DIR/temp";  }
   ];
   devshell.startup.mk-dirs.text = ''
     mkdir -p $EMCC_TEMP_DIR

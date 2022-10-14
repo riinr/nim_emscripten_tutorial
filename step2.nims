@@ -23,4 +23,4 @@ if defined(emscripten):
   --define:noSignalHandler # Emscripten doesn't support signal handlers.
 
   # Pass this to Emscripten linker to generate html file scaffold for us.
-  switch("passL", "-o step2.html --shell-file shell_minimal.html")
+  --passL:"-o step2.html --shell-file shell_minimal.html"
